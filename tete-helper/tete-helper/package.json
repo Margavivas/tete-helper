@@ -1,21 +1,16 @@
 {
   "name": "tete-helper",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "if-env TYPE=server && (cd server && npm install) || (cd client && npm install)",
+    "server": "node ./server/server.js",
+    "client": "cd cliente && npm start"
   },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
-    "@vitejs/plugin-react-swc": "^3.0.0",
-    "vite": "^4.1.0"
+    "if-env": "^1.0.4"
   }
 }
